@@ -57,16 +57,17 @@ KEY CHANGES
 - Improves API ergonomics and reduces boilerplate for consumers.
 - button-to-key mapping allows you to use API on button by using button to lookup
 
-5. Reset Handling
+4. Reset Handling
 --------------------------------
 - Optional state reset added via config.reset_state.
 
-6. API Behavior Changes
+5. API Behavior Changes
 -----------------------
-- Activate_button() now:
+- Activate_button(), toggle_visibility, remove_button, disable_button now:
+
     - Validates button existence and type
-    - Clears previous connections before reactivation
-    - Applies interaction hooks dynamically based on operator table
+    -supports both button instance and key to lookup
+
 - remove_button() fully cleans:
     - state
     - cache
